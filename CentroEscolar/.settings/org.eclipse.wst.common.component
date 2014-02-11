@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="CentroEscolar">
+    <wb-module deploy-name="centroEscolar">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="CentroEscolar"/>
-        <property name="java-output-path" value="/CentroEscolar/build/classes"/>
+        <property name="java-output-path" value="/centroEscolar/build/classes"/>
+        <property name="context-root" value="centroEscolar"/>
     </wb-module>
 </project-modules>
