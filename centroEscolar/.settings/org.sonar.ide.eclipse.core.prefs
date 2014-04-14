@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+extraProperties=sonar.jdbc.password\=sonar\r\nsonar.jdbc.username\=sonar\r\nsonar.jdbc.url\=jdbc\:mysql\://localhost\:3306/sonar?useUnicode\r\nsonar.host.url\=http\://localhost\:9000
+lastAnalysisDate=1396900658279
+projectKey=centroEscolar\:centroEscolar
+serverUrl=http\://localhost\:9000
+version=2
