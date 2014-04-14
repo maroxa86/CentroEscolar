@@ -7,7 +7,7 @@
 <title>Alta Nuevo Alumno</title>
 </head>
 <body>
-	<form>
+	<form method="post" id="formularioAltaAlumno" name="formularioAltaAlumno" action="insertarAlumno.jsp">
 		<fieldset>
 			<legend>Formulario para anadir un nuevo alumno</legend>
 			<p>
