@@ -29,6 +29,7 @@
 			<%=alum.getPrimerApellido()%>
 			<%=alum.getSegundoApellido()%>
 			<%=alum.getCurso()%>
+			<a href="borrarAlumno.jsp?id=<%=alum.getId()%>">Borrar</a>
 			<br/>
 		<%}
 	%>

@@ -14,6 +14,10 @@ public class Alumno {
 		super();
 	}
 	
+	public Alumno(String id){
+		this.id = id;
+	}
+	
 	public Alumno(String id, String nombre, String primerApellido,
 			String segundoApellido, String curso) {
 		super();
@@ -81,7 +85,7 @@ public class Alumno {
 		
 		consultaSQL += "('" + this.id + "','" + this.nombre + "','"
 				+ this.primerApellido + "','" + this.segundoApellido + "','"
-				+ curso + "')";
+				+ this.curso + "')";
 		
 		DataBaseHelper<Alumno> datos = new DataBaseHelper<Alumno>();
 		
@@ -96,5 +100,14 @@ public class Alumno {
 		List<Alumno> listaDeAlumnos = helper.seleccionarRegistros(consultaSQL, Alumno.class);
 		
 		return listaDeAlumnos;
+	}
+	
+	public void borrar(){
+		
+		String consultaSQL = "delete from alum_alumno where id = '" + this.id + "'";
+		
+		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
+		
+		helper.modificarRegistro(consultaSQL);
 	}
 }
