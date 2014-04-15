@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="org.centroescolar.Alumno"%>
+<%@ page import="java.util.List;" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -28,7 +30,16 @@
 			</p>
 			<p>
 				<label for="curso">Curso</label>
-				<input type="text" id="curso" name="curso" />
+				<select name="curso">
+					<option value="seleccionar">seleccionar</option>
+					<%
+					List<String> cursos=null;
+					Alumno alumno = new Alumno();
+					cursos = alumno.buscarTodosLosCursos();
+					for(String curso : cursos) { %>
+						<option value="<%=curso%>"><%=curso%></option>
+					<% } %>
+				</select>
 			</p>
 			<p>
 				<input type="submit" id="altaAlumno" name="altaAlumno" value="Nuevo Alumno"/>
