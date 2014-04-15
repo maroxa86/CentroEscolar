@@ -68,7 +68,7 @@ public class Alumno {
 		this.curso = curso;
 	}
 
-	public List<String> buscarTodosLosCursos() {
+	public static List<String> buscarTodosLosCursos() {
 		
 		String consultaSQL = "select distinct(curso) from alum_alumno";
 		
@@ -92,7 +92,7 @@ public class Alumno {
 		datos.modificarRegistro(consultaSQL);
 	}
 
-	public List<Alumno> buscarTodosLosAlumnos() {
+	public static List<Alumno> buscarTodosLosAlumnos() {
 		String consultaSQL = "select id, nombre, primerApellido, segundoApellido, curso from alum_alumno";
 		
 		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
@@ -109,5 +109,38 @@ public class Alumno {
 		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
 		
 		helper.modificarRegistro(consultaSQL);
+	}
+	
+	public static Alumno BuscarAlumno(String id){
+		
+		String consultaSQL = "select id, nombre, primerApellido, segundoApellido, curso from alum_alumno where id = '" + id + "'";
+		
+		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
+		
+		List<Alumno> listaDeAlumnos = helper.seleccionarRegistros(consultaSQL, Alumno.class);
+		
+		return listaDeAlumnos.get(0);
+	}
+	
+	public void modificarAlumno(){
+		
+		String consultaSQL = "update alum_alumno set id= '"+ this.id +"', nombre = '"+ this.nombre +"', primerApellido = '"
+							+ this.primerApellido +"', segundoApellido = '"+ this.segundoApellido +"', curso = '"+ this.curso 
+							+"' where id= '"+ this.id +"'";
+		
+		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
+		
+		helper.modificarRegistro(consultaSQL);
+	}
+	
+	public static List<Alumno> buscarAlumnosPorCurso(String curso){
+		String consultaSQL = "select id, nombre, primerApellido, segundoApellido, curso from alum_alumno "
+								+ "where curso = '"+ curso +"'";
+		
+		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();
+		
+		List<Alumno> listaDeAlumnos = helper.seleccionarRegistros(consultaSQL, Alumno.class);
+		
+		return listaDeAlumnos;
 	}
 }
