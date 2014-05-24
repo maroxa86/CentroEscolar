@@ -92,7 +92,7 @@ public class Alumno {
 		datos.modificarRegistro(consultaSQL);
 	}
 
-	public static List<Alumno> buscarTodosLosAlumnos() {
+	public static List<Alumno> buscarTodosLosAlumnos(){
 		String consultaSQL = "select id, nombre, primerApellido, segundoApellido, curso from alum_alumno";
 		
 		DataBaseHelper<Alumno> helper = new DataBaseHelper<Alumno>();

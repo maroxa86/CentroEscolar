@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.centroescolar.exception.CentroEscolarException;
+
 public class DataBaseHelper<T> {
 
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
@@ -19,7 +21,7 @@ public class DataBaseHelper<T> {
 	private static final String DBERROR = "Error accediendo a la base de datos";
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public List<T> seleccionarRegistros(String consultaSQL, Class clase) {
+	public List<T> seleccionarRegistros(String consultaSQL, Class clase){
 
 		Connection conexion = null;
 		Statement sentencia = null;
@@ -84,7 +86,7 @@ public class DataBaseHelper<T> {
 		return listaDeObjetos;
 	}
 
-	public void modificarRegistro(String consultaSQL) {
+	public void modificarRegistro(String consultaSQL){
 		Connection conexion = null;
 		Statement sentencia = null;
 
@@ -97,14 +99,17 @@ public class DataBaseHelper<T> {
 
 		} catch (ClassNotFoundException e) {
 			System.out.println(DRIVERERROR + e.getMessage());
+			throw new CentroEscolarException(DRIVERERROR,e);
 		} catch (SQLException e) {
 			System.out.println(DBERROR + e.getMessage());
+			throw new CentroEscolarException(DBERROR,e);
 		} finally {
 			if (sentencia != null) {
 				try {
 					sentencia.close();
 				} catch (SQLException e) {
 					System.out.println("Error cerrando la sentencia: " + e.getMessage());
+					throw new CentroEscolarException("Error cerrando la sentencia",e);
 				}
 			}
 
@@ -113,6 +118,7 @@ public class DataBaseHelper<T> {
 					conexion.close();
 				} catch (SQLException e) {
 					System.out.println("Error cerrando la conexion: " + e.getMessage());
+					throw new CentroEscolarException("Error cerrando la conexion",e);
 				}
 			}
 		}
