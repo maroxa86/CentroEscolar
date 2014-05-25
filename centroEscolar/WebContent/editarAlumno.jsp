@@ -3,7 +3,7 @@
 <%@ page import="org.centroescolar.Alumno"%>
 <%@ page import="java.util.List;" %>
 <%
-	Alumno alumno = Alumno.BuscarAlumno(request.getParameter("id"));
+	Alumno alumno = (Alumno) request.getAttribute("alumno");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -12,7 +12,7 @@
 <title>Editar Alumno</title>
 </head>
 <body>
-	<form method="post" id="formularioEditarAlumno" name="formularioEditarAlumno" action="modificarAlumno.jsp">
+	<form method="post" id="formularioEditarAlumno" name="formularioEditarAlumno" action="ModificarAlumno.do">
 		<fieldset>
 			<legend>Formulario para modificar un alumno</legend>
 			<p>
@@ -37,7 +37,7 @@
 					<option value="seleccionar">seleccionar</option>
 					<%
 					List<String> cursos=null;
-					cursos = Alumno.buscarTodosLosCursos();
+					cursos = (List<String>) request.getAttribute("listaDeCursos");
 					for(String curso : cursos) { 
 						if(curso.equals(alumno.getCurso())){%>
 						<option value="<%=curso%>" selected="selected"><%=curso%></option>

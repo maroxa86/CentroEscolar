@@ -9,15 +9,20 @@
 <title>Alumnos en el centro</title>
 </head>
 <body>
-	<form method="get" action="mostrarAlumnos.jsp">
+	<form method="get" action="FiltrarCurso.do">
 		<select name="curso">
 			<option value="seleccionar">seleccionar</option>
 			<%
 			List<String> cursos=null;
-			cursos = Alumno.buscarTodosLosCursos();
-			for(String curso : cursos) { %>
+			cursos = (List<String>) request.getAttribute("listaDeCursos");
+			for(String curso : cursos) { 
+				if(curso.equals(request.getParameter("curso"))){%>
+				<option value="<%=curso%>" selected="selected"><%=curso%></option>
+			<% }
+				else{%>
 				<option value="<%=curso%>"><%=curso%></option>
-			<% } %>
+			<% }
+			}%>
 		</select>
 		<input type="submit" value="Filtrar" id="filtrar">
 	</form>
@@ -25,24 +30,17 @@
 	<%
 		List<Alumno> listaDeAlumnos = null;
 		listaDeAlumnos = null;
-		if (request.getParameter("curso")==null ||
-			request.getParameter("curso").equals("seleccionar")) {
-			listaDeAlumnos=Alumno.buscarTodosLosAlumnos();
-		}
-		else {
-			listaDeAlumnos=Alumno.buscarAlumnosPorCurso(request.getParameter("curso"));
-		}
+		listaDeAlumnos=(List<Alumno>) request.getAttribute("listaDeAlumnos");
 		for(Alumno alumno : listaDeAlumnos){%>
 			<%=alumno.getId()%>
 			<%=alumno.getNombre()%>
 			<%=alumno.getPrimerApellido()%>
 			<%=alumno.getSegundoApellido()%>
 			<%=alumno.getCurso()%>
-			<a href="borrarAlumno.jsp?id=<%=alumno.getId()%>">Borrar</a>
-			<a href="editarAlumno.jsp?id=<%=alumno.getId()%>">Editar</a>
+			<a href="BorrarAlumno.do?id=<%=alumno.getId()%>">Borrar</a>
+			<a href="EditarAlumno.do?id=<%=alumno.getId()%>">Editar</a>
 			<br/>
-		<%}
-	%>
-	<a href="altaAlumno.jsp">Añadir Nuevo Alumno</a>
+		<%}%>
+	<a href="AltaAlumno.do">Añadir Nuevo Alumno</a>
 </body>
 </html>

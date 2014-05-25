@@ -9,7 +9,7 @@
 <title>Alta Nuevo Alumno</title>
 </head>
 <body>
-	<form method="post" id="formularioAltaAlumno" name="formularioAltaAlumno" action="insertarAlumno.jsp">
+	<form method="post" id="formularioAltaAlumno" name="formularioAltaAlumno" action="InsertarAlumno.do">
 		<fieldset>
 			<legend>Formulario para anadir un nuevo alumno</legend>
 			<p>
@@ -34,8 +34,7 @@
 					<option value="seleccionar">seleccionar</option>
 					<%
 					List<String> cursos=null;
-					Alumno alumno = new Alumno();
-					cursos = alumno.buscarTodosLosCursos();
+					cursos = (List<String>) request.getAttribute("listaDeCursos");
 					for(String curso : cursos) { %>
 						<option value="<%=curso%>"><%=curso%></option>
 					<% } %>

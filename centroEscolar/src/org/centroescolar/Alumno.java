@@ -140,7 +140,7 @@ public class Alumno {
 		List<Alumno> listaDeAlumnos = helper.seleccionarRegistros(consultaSQL,
 				Alumno.class);
 
-		log.info("Fin metodo insertarAlumno");
+		log.info("Fin metodo BuscarAlumno");
 
 		return listaDeAlumnos.get(0);
 	}
