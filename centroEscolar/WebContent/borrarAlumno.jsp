@@ -5,6 +5,6 @@
 <%
 	String id = request.getParameter("id");
 	Alumno alumno = new Alumno(id);
-	alumno.borrar();
+	alumno.borrarAlumno();
 	response.sendRedirect("mostrarAlumnos.jsp");
 %>
