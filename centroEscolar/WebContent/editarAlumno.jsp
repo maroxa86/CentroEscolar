@@ -14,7 +14,7 @@
 			<legend>Formulario para modificar un alumno</legend>
 			<p>
 				<label for="id">Identificador</label>
-				<input type="text" id="id" name="id" value="${alumno.id}"/>
+				<input type="text" id="id" name="id" value="${alumno.id}" disabled="disabled"/>
 			</p>
 			<p>
 				<label for="nombre">Nombre</label>
