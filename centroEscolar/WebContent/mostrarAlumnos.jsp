@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="org.centroescolar.Alumno"%>
 <%@ page import="java.util.List;" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,36 +11,20 @@
 <body>
 	<form method="get" action="FiltrarCurso.do">
 		<select name="curso">
-			<option value="seleccionar">seleccionar</option>
-			<%
-			List<String> cursos=null;
-			cursos = (List<String>) request.getAttribute("listaDeCursos");
-			for(String curso : cursos) { 
-				if(curso.equals(request.getParameter("curso"))){%>
-				<option value="<%=curso%>" selected="selected"><%=curso%></option>
-			<% }
-				else{%>
-				<option value="<%=curso%>"><%=curso%></option>
-			<% }
-			}%>
+			<option value="seleccionar" selected="selected">seleccionar</option>
+			<c:forEach var="curso" items="${listaDeCursos}">
+				<option value="${curso}">${curso}</option>
+			</c:forEach>
 		</select>
 		<input type="submit" value="Filtrar" id="filtrar">
 	</form>
 	<br/>
-	<%
-		List<Alumno> listaDeAlumnos = null;
-		listaDeAlumnos = null;
-		listaDeAlumnos=(List<Alumno>) request.getAttribute("listaDeAlumnos");
-		for(Alumno alumno : listaDeAlumnos){%>
-			<%=alumno.getId()%>
-			<%=alumno.getNombre()%>
-			<%=alumno.getPrimerApellido()%>
-			<%=alumno.getSegundoApellido()%>
-			<%=alumno.getCurso()%>
-			<a href="BorrarAlumno.do?id=<%=alumno.getId()%>">Borrar</a>
-			<a href="EditarAlumno.do?id=<%=alumno.getId()%>">Editar</a>
-			<br/>
-		<%}%>
+	<c:forEach var="alumno" items="${listaDeAlumnos}">
+		${alumno.id} ${alumno.nombre} ${alumno.primerApellido} ${alumno.segundoApellido} ${alumno.curso}
+		<a href="BorrarAlumno.do?id=${alumno.id}">Borrar</a>
+		<a href="EditarAlumno.do?id=${alumno.id}">Editar</a>
+		<br/>
+	</c:forEach>
 	<a href="AltaAlumno.do">Añadir Nuevo Alumno</a>
 </body>
 </html>
