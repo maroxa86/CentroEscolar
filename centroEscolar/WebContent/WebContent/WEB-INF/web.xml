@@ -9,13 +9,13 @@
     <location>/error.jsp</location>
   </error-page>
   <servlet>
-  	<description></description>
-  	<display-name>ControladorAlumnos</display-name>
-  	<servlet-name>ControladorAlumnos</servlet-name>
-  	<servlet-class>org.centroescolar.controlador.ControladorAlumnos</servlet-class>
+    <description></description>
+    <display-name>ControladorAlumnos</display-name>
+    <servlet-name>ControladorAlumnos</servlet-name>
+    <servlet-class>org.centroescolar.controlador.ControladorAlumnos</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>ControladorAlumnos</servlet-name>
-  	<url-pattern>*.do</url-pattern>
+    <servlet-name>ControladorAlumnos</servlet-name>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 </web-app>
