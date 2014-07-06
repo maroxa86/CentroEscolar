@@ -3,7 +3,7 @@ package org.centroescolar.controlador.acciones;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.centroescolar.Alumno;
+import org.centroescolar.aplicacion.bo.Alumno;
 
 public class InsertarAlumnoAccion extends Accion {
 	
@@ -13,7 +13,7 @@ public class InsertarAlumnoAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para insertar un nuevo alumno en el sistema");
-		String id = request.getParameter("id");
+		int id = Integer.parseInt(request.getParameter("id"));
 		String nombre = request.getParameter("nombre");
 		String primerApellido = request.getParameter("primerApellido");
 		String segundoApellido = request.getParameter("segundoApellido");

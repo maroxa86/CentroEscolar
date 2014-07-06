@@ -5,7 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.centroescolar.Alumno;
+import org.centroescolar.aplicacion.bo.Alumno;
 
 public class EditarAlumnoAccion extends Accion {
 
@@ -16,8 +16,8 @@ public class EditarAlumnoAccion extends Accion {
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar el formulario para modificar los datos de los alumnos");
-		String id = request.getParameter("id");
-		List<String> listaDeCursos = Alumno.buscarTodosLosCursos();
+		int id = Integer.parseInt(request.getParameter("id"));
+		List<Alumno> listaDeCursos = Alumno.buscarTodosLosCursos();
 		Alumno alumno = Alumno.BuscarAlumno(id);
 		request.setAttribute("listaDeCursos", listaDeCursos);
 		request.setAttribute("alumno", alumno);
