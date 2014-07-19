@@ -3,7 +3,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
-import org.centroescolar.controlador.acciones.Accion;
+import org.centroescolar.aplicacion.bo.Curso;
 
 
 public class ModificarAlumnoAccion extends Accion {
@@ -19,7 +19,7 @@ public class ModificarAlumnoAccion extends Accion {
 		String nombre = request.getParameter("nombre");
 		String primerApellido = request.getParameter("primerApellido");
 		String segundoApellido = request.getParameter("segundoApellido");
-		String curso = request.getParameter("curso");
+		Curso curso = new Curso(Integer.parseInt(request.getParameter("curso")));
 
 		Alumno alumno = new Alumno(id, nombre, primerApellido, segundoApellido, curso);
 		alumno.modificarAlumno();

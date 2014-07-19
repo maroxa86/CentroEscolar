@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
+import org.centroescolar.aplicacion.bo.Curso;
 
 public class MostrarAlumnosAccion extends Accion {
 
@@ -17,7 +18,7 @@ public class MostrarAlumnosAccion extends Accion {
 		log.info("Inició del proceso para mostrar la información de los alumnos");
 		
 		List<Alumno> listaDeAlumnos = Alumno.buscarTodosLosAlumnos();
-		List<Alumno> listaDeCursos = Alumno.buscarTodosLosCursos();
+		List<Curso> listaDeCursos = Curso.buscarTodosLosCursos();
 		
 		request.setAttribute("listaDeAlumnos", listaDeAlumnos);
 		request.setAttribute("listaDeCursos", listaDeCursos);

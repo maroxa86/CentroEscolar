@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.apache.log4j.Logger;
@@ -22,7 +24,9 @@ public class Alumno {
 	private String nombre = null;
 	private String primerApellido = null;
 	private String segundoApellido = null;
-	private String curso = null;
+	@ManyToOne
+	@JoinColumn(name="curso")
+	private Curso curso = null;
 
 	public Alumno() {
 		super();
@@ -33,7 +37,7 @@ public class Alumno {
 	}
 
 	public Alumno(int id, String nombre, String primerApellido,
-			String segundoApellido, String curso) {
+			String segundoApellido, Curso curso) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -74,29 +78,12 @@ public class Alumno {
 		this.segundoApellido = segundoApellido;
 	}
 
-	public String getCurso() {
+	public Curso getCurso() {
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(Curso curso) {
 		this.curso = curso;
-	}
-
-	public static List<Alumno> buscarTodosLosCursos() {
-		log.info("Inicio metodo buscarTodosLosCursos");
-
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		
-		String consultaSQL = "select distinct(alumno.curso) from Alumno alumno";
-		
-		List<Alumno> listaDeCursos = session.createQuery(consultaSQL).list();
-		
-		session.close();
-
-		log.info("Fin metodo buscarTodosLosCursos");
-
-		return listaDeCursos;
 	}
 
 	public void insertarAlumno() {
@@ -117,7 +104,7 @@ public class Alumno {
 		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
 		Session session = factoriaSession.openSession();
 		
-		String consultaSQL = "from Alumno";
+		String consultaSQL = "from Alumno alumno right join fetch alumno.curso order by alumno.id";
 
 		List<Alumno> listaDeAlumnos = session.createQuery(consultaSQL).list();
 

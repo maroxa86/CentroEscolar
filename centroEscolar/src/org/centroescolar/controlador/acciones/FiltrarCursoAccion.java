@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
+import org.centroescolar.aplicacion.bo.Curso;
 
 public class FiltrarCursoAccion extends Accion {
 
@@ -17,7 +18,7 @@ public class FiltrarCursoAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para filtrar los alumnos");
 		List<Alumno> listaDeAlumnos = null;
-		List<Alumno> listaDeCursos = Alumno.buscarTodosLosCursos();
+		List<Curso> listaDeCursos = Curso.buscarTodosLosCursos();
 		if(request.getParameter("curso") == null || request.getParameter("curso").equals("seleccionar")){
 			listaDeAlumnos = Alumno.buscarTodosLosAlumnos();
 		}

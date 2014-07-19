@@ -9,6 +9,7 @@
 <title>Editar Alumno</title>
 </head>
 <body>
+	
 	<form method="post" id="formularioEditarAlumno" name="formularioEditarAlumno" action="ModificarAlumno.do">
 		<fieldset>
 			<legend>Formulario para modificar un alumno</legend>
@@ -33,7 +34,14 @@
 				<select name="curso">
 					<option value="seleccionar">seleccionar</option>
 					<c:forEach var="curso" items="${listaDeCursos}">
-						<option value="${curso}" selected="selected">${curso}</option>
+						<c:choose>
+							<c:when test="${curso.id eq alumno.curso.id}">
+								<option value="${curso.id}" selected="selected">${curso.curso}</option>
+							</c:when>
+							<c:otherwise>
+								<option value="${curso.id}">${curso.curso}</option>
+							</c:otherwise>
+						</c:choose>
 					</c:forEach>
 				</select>
 			</p>
