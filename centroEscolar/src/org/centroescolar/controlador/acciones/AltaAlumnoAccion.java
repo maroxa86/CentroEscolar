@@ -6,13 +6,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Curso;
+import org.centroescolar.aplicacion.dao.impl.CursoImpl;
 
 public class AltaAlumnoAccion extends Accion {
 
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar el formulario para dar de alta a los alumnos");
-		List<Curso> listaDeCursos = Curso.buscarTodosLosCursos();
+		CursoImpl cursoDAO = new CursoImpl();
+		List<Curso> listaDeCursos = cursoDAO.buscarTodos();
 		request.setAttribute("listaDeCursos", listaDeCursos);
 		log.info("Finalización del proceso para mostrar el formulario para dar de alta a los alumnos");
 		return "altaAlumno.jsp";

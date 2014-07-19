@@ -4,15 +4,10 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.TypedQuery;
-
-import org.centroescolar.aplicacion.JPAHelper;
 
 @Entity
 @Table(name = "CUR_CURSO")
@@ -56,20 +51,5 @@ public class Curso {
 
 	public void setListaDeAlumnos(List<Alumno> listaDeAlumnos) {
 		this.listaDeAlumnos = listaDeAlumnos;
-	}
-
-	public static List<Curso> buscarTodosLosCursos() {
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
-		TypedQuery<Curso> consulta = manager.createQuery(
-				"SELECT curso FROM Curso curso", Curso.class);
-		List<Curso> listaDeCursos = null;
-		try {
-			listaDeCursos = consulta.getResultList();
-		} finally {
-			manager.close();
-		}
-
-		return listaDeCursos;
 	}
 }

@@ -7,14 +7,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
+import org.centroescolar.aplicacion.dao.impl.AlumnoImpl;
+import org.centroescolar.aplicacion.dao.impl.CursoImpl;
 
 public class MostrarAlumnosAccion extends Accion {
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar la información de los alumnos");
 		
-		List<Alumno> listaDeAlumnos = Alumno.buscarTodosLosAlumnos();
-		List<Curso> listaDeCursos = Curso.buscarTodosLosCursos();
+		AlumnoImpl alumnoDAO = new AlumnoImpl();
+		CursoImpl cursoDAO = new CursoImpl();
+		List<Alumno> listaDeAlumnos = alumnoDAO.buscarTodos();
+		List<Curso> listaDeCursos = cursoDAO.buscarTodos();
 		
 		request.setAttribute("listaDeAlumnos", listaDeAlumnos);
 		request.setAttribute("listaDeCursos", listaDeCursos);
