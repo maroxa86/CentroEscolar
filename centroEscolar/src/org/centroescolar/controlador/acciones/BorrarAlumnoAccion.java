@@ -7,10 +7,6 @@ import org.centroescolar.aplicacion.bo.Alumno;
 
 public class BorrarAlumnoAccion extends Accion {
 
-	public BorrarAlumnoAccion() {
-		super();
-	}
-
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para borrar un alumno en el sistema");

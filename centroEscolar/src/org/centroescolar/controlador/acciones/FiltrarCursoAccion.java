@@ -10,10 +10,6 @@ import org.centroescolar.aplicacion.bo.Curso;
 
 public class FiltrarCursoAccion extends Accion {
 
-	public FiltrarCursoAccion() {
-		super();
-	}
-
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para filtrar los alumnos");
@@ -23,7 +19,8 @@ public class FiltrarCursoAccion extends Accion {
 			listaDeAlumnos = Alumno.buscarTodosLosAlumnos();
 		}
 		else{
-			listaDeAlumnos = Alumno.buscarAlumnosPorCurso(request.getParameter("curso"));
+			Curso curso = new Curso(Integer.parseInt(request.getParameter("curso")));
+			listaDeAlumnos = Alumno.buscarAlumnosPorCurso(curso);
 		}
 		request.setAttribute("listaDeAlumnos", listaDeAlumnos);
 		request.setAttribute("listaDeCursos", listaDeCursos);

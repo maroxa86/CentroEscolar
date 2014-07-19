@@ -7,10 +7,6 @@ import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 
 public class InsertarAlumnoAccion extends Accion {
-	
-	public InsertarAlumnoAccion(){
-		super();
-	}
 
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para insertar un nuevo alumno en el sistema");

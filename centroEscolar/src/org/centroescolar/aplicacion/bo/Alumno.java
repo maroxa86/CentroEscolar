@@ -3,19 +3,21 @@ package org.centroescolar.aplicacion.bo;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PersistenceException;
 import javax.persistence.Table;
+import javax.persistence.TypedQuery;
 
 import org.apache.log4j.Logger;
-import org.centroescolar.aplicacion.HibernateHelper;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.centroescolar.aplicacion.JPAHelper;
 
 @Entity
-@Table(name="ALUM_ALUMNO")
+@Table(name = "ALUM_ALUMNO")
 public class Alumno {
 
 	private static final Logger log = Logger.getLogger(Alumno.class);
@@ -25,7 +27,7 @@ public class Alumno {
 	private String primerApellido = null;
 	private String segundoApellido = null;
 	@ManyToOne
-	@JoinColumn(name="curso")
+	@JoinColumn(name = "curso")
 	private Curso curso = null;
 
 	public Alumno() {
@@ -88,28 +90,40 @@ public class Alumno {
 
 	public void insertarAlumno() {
 		log.info("Inicio metodo insertarAlumno");
-		
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		session.beginTransaction();
-		session.save(this);
-		session.getTransaction().commit();
+
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		EntityTransaction tx = null;
+		try {
+			tx = manager.getTransaction();
+			tx.begin();
+			manager.persist(this);
+			tx.commit();
+		} catch (PersistenceException e) {
+			manager.getTransaction().rollback();
+			throw e;
+		} finally {
+			manager.close();
+		}
 
 		log.info("Fin metodo insertarAlumno");
 	}
 
 	public static List<Alumno> buscarTodosLosAlumnos() {
 		log.info("Inicio metodo buscarTodosLosAlumnos");
-		
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		
-		String consultaSQL = "from Alumno alumno right join fetch alumno.curso order by alumno.id";
 
-		List<Alumno> listaDeAlumnos = session.createQuery(consultaSQL).list();
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		TypedQuery<Alumno> consulta = manager.createQuery(
+				"SELECT alumno FROM Alumno alumno JOIN FETCH alumno.curso order by alumno.id",
+				Alumno.class);
+		List<Alumno> listaDeAlumnos = null;
+		try {
+			listaDeAlumnos = consulta.getResultList();
+		} finally {
+			manager.close();
+		}
 
-		session.close();
-		
 		log.info("Fin metodo buscarTodosLosAlumnos");
 
 		return listaDeAlumnos;
@@ -117,13 +131,22 @@ public class Alumno {
 
 	public void borrarAlumno() {
 		log.info("Inicio metodo borrarAlumno");
-		
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		session.beginTransaction();
-		session.delete(this);
-		session.getTransaction().commit();
-		
+
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		EntityTransaction tx = null;
+		try {
+			tx = manager.getTransaction();
+			tx.begin();
+			manager.remove(manager.merge(this));
+			tx.commit();
+		} catch (PersistenceException e) {
+			manager.getTransaction().rollback();
+			throw e;
+		} finally {
+			manager.close();
+		}
+
 		log.info("Fin metodo borrarAlumno");
 	}
 
@@ -131,11 +154,19 @@ public class Alumno {
 
 		log.info("Inicio metodo BuscarAlumno");
 
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		Alumno alumno = (Alumno) session.get(Alumno.class, id);
-		session.close();
-		
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		TypedQuery<Alumno> consulta = manager.createQuery(
+				"SELECT alumno FROM Alumno alumno JOIN FETCH alumno.curso where alumno.id=?1",
+				Alumno.class);
+		consulta.setParameter(1, id);
+		Alumno alumno = null;
+		try {
+			alumno = consulta.getSingleResult();
+		} finally {
+			manager.close();
+		}
+
 		log.info("Fin metodo BuscarAlumno");
 
 		return alumno;
@@ -144,25 +175,39 @@ public class Alumno {
 	public void modificarAlumno() {
 		log.info("Inicio metodo modificarAlumno");
 
-		SessionFactory factoriaSession=HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		session.beginTransaction();
-		session.saveOrUpdate(this);
-		session.getTransaction().commit();
-		
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		EntityTransaction tx = null;
+		try {
+			tx = manager.getTransaction();
+			tx.begin();
+			manager.merge(this);
+			tx.commit();
+		} catch (PersistenceException e) {
+			manager.getTransaction().rollback();
+			throw e;
+		} finally {
+			manager.close();
+		}
+
 		log.info("Fin metodo modificarAlumno");
 	}
 
-	public static List<Alumno> buscarAlumnosPorCurso(String curso) {
+	public static List<Alumno> buscarAlumnosPorCurso(Curso curso) {
 		log.info("Inicio metodo buscarAlumnosPorCurso");
-		
-		SessionFactory factoriaSession = HibernateHelper.getSessionFactory();
-		Session session = factoriaSession.openSession();
-		
-		Query consultaSQL = session.createQuery("from Alumno alumno where alumno.curso=:curso");
 
-		consultaSQL.setString("curso",curso);
-		List<Alumno> listaDeAlumnos = consultaSQL.list();
+		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
+		EntityManager manager = factoriaSession.createEntityManager();
+		TypedQuery<Alumno> consulta = manager.createQuery(
+				"SELECT alumno FROM Alumno alumno where alumno.curso=?1 order by alumno.id",
+				Alumno.class);
+		consulta.setParameter(1, curso);
+		List<Alumno> listaDeAlumnos = null;
+		try {
+			listaDeAlumnos = consulta.getResultList();
+		} finally {
+			manager.close();
+		}
 
 		log.info("Fin metodo buscarAlumnosPorCurso");
 

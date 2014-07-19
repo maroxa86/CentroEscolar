@@ -31,7 +31,7 @@
 			<p>
 				<label for="curso">Curso</label>
 				<select name="curso">
-					<option value="seleccionar">seleccionar</option>
+					<option value="seleccionar" selected="selected">seleccionar</option>
 					<c:forEach var="curso" items="${listaDeCursos}">
 						<option value="${curso.id}">${curso.curso}</option>
 					</c:forEach>

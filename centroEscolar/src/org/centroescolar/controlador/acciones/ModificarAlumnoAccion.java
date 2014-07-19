@@ -8,10 +8,6 @@ import org.centroescolar.aplicacion.bo.Curso;
 
 public class ModificarAlumnoAccion extends Accion {
 
-	public ModificarAlumnoAccion() {
-		super();
-	}
-
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para modificar los datos de un alumno");

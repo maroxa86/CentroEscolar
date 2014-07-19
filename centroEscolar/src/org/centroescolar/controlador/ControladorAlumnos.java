@@ -19,13 +19,6 @@ public class ControladorAlumnos extends HttpServlet {
 	private static final Logger log = Logger.getLogger(ControladorAlumnos.class);
 
 	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public ControladorAlumnos() {
-		super();
-	}
-
-	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */

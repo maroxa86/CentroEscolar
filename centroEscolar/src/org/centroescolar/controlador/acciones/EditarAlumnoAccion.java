@@ -10,10 +10,6 @@ import org.centroescolar.aplicacion.bo.Curso;
 
 public class EditarAlumnoAccion extends Accion {
 
-	public EditarAlumnoAccion() {
-		super();
-	}
-
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar el formulario para modificar los datos de los alumnos");

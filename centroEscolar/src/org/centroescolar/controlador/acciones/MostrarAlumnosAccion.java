@@ -10,10 +10,6 @@ import org.centroescolar.aplicacion.bo.Curso;
 
 public class MostrarAlumnosAccion extends Accion {
 
-	public MostrarAlumnosAccion() {
-		super();
-	}
-
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar la información de los alumnos");
 		

@@ -9,10 +9,6 @@ import org.centroescolar.aplicacion.bo.Curso;
 
 public class AltaAlumnoAccion extends Accion {
 
-	public AltaAlumnoAccion() {
-		super();
-	}
-
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar el formulario para dar de alta a los alumnos");
