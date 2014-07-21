@@ -5,7 +5,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
-import org.centroescolar.aplicacion.dao.impl.AlumnoImpl;
+import org.centroescolar.aplicacion.dao.AlumnoDAO;
+import org.centroescolar.aplicacion.factory.DAOAbstractFactory;
+import org.centroescolar.aplicacion.factory.DAOFactory;
 
 public class InsertarAlumnoAccion extends Accion {
 
@@ -19,7 +21,9 @@ public class InsertarAlumnoAccion extends Accion {
 		Curso curso = new Curso(Integer.parseInt(request.getParameter("curso")));
 
 		Alumno alumno = new Alumno(id, nombre, primerApellido, segundoApellido, curso);
-		AlumnoImpl alumnoDAO = new AlumnoImpl();
+		
+		DAOFactory factoria = DAOAbstractFactory.getInstance();
+		AlumnoDAO alumnoDAO = factoria.getAlumnoDAO();
 		
 		alumnoDAO.insertarAlumno(alumno);
 
