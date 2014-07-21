@@ -7,10 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
-import org.centroescolar.aplicacion.dao.AlumnoDAO;
-import org.centroescolar.aplicacion.dao.CursoDAO;
-import org.centroescolar.aplicacion.factory.DAOAbstractFactory;
-import org.centroescolar.aplicacion.factory.DAOFactory;
+import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
+import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class FiltrarCursoAccion extends Accion {
 
@@ -18,19 +16,17 @@ public class FiltrarCursoAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para filtrar los alumnos");
 		
-		DAOFactory factoria = DAOAbstractFactory.getInstance();
-		AlumnoDAO alumnoDAO = factoria.getAlumnoDAO();
-		CursoDAO cursoDAO = factoria.getCursoDAO();
+		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
 		
 		List<Alumno> listaDeAlumnos = null;
-		List<Curso> listaDeCursos = cursoDAO.buscarTodos();
+		List<Curso> listaDeCursos = servicioAlumnos.buscarTodosLosCursos();
 		
 		if(request.getParameter("curso") == null || request.getParameter("curso").equals("seleccionar")){
-			listaDeAlumnos = alumnoDAO.buscarTodos();
+			listaDeAlumnos = servicioAlumnos.buscarTodosLosAlumnos();
 		}
 		else{
 			Curso curso = new Curso(Integer.parseInt(request.getParameter("curso")));
-			listaDeAlumnos = alumnoDAO.buscarAlumnosPorCurso(curso);
+			listaDeAlumnos = servicioAlumnos.buscarAlumnosPorCurso(curso);
 		}
 		
 		request.setAttribute("listaDeAlumnos", listaDeAlumnos);

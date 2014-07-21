@@ -4,9 +4,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
-import org.centroescolar.aplicacion.dao.AlumnoDAO;
-import org.centroescolar.aplicacion.factory.DAOAbstractFactory;
-import org.centroescolar.aplicacion.factory.DAOFactory;
+import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
+import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 
 public class ModificarAlumnoAccion extends Accion {
@@ -23,10 +22,9 @@ public class ModificarAlumnoAccion extends Accion {
 
 		Alumno alumno = new Alumno(id, nombre, primerApellido, segundoApellido, curso);
 		
-		DAOFactory factoria = DAOAbstractFactory.getInstance();
-		AlumnoDAO alumnoDAO = factoria.getAlumnoDAO();
+		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
 		
-		alumnoDAO.modificarAlumno(alumno);
+		servicioAlumnos.modificarAlumno(alumno);
 
 		log.info("Inició del proceso para modificar los datos de un alumno");
 		
