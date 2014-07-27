@@ -6,19 +6,19 @@ import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.dao.AlumnoDAO;
 import org.centroescolar.aplicacion.dao.CursoDAO;
-import org.centroescolar.aplicacion.factory.DAOAbstractFactory;
-import org.centroescolar.aplicacion.factory.DAOFactory;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ServicioAlumnosImpl implements ServicioAlumnos {
 
 	private AlumnoDAO alumnoDAO = null;
 	private CursoDAO cursoDAO = null;
 	
+	@SuppressWarnings("resource")
 	public ServicioAlumnosImpl(){
-		DAOFactory factoria = DAOAbstractFactory.getInstance();
-		alumnoDAO = factoria.getAlumnoDAO();
-		cursoDAO = factoria.getCursoDAO();
+		ClassPathXmlApplicationContext factoria = new ClassPathXmlApplicationContext("contextoAplicacion.xml"); 
+		alumnoDAO = (AlumnoDAO) factoria.getBean("alumnoDAO");
+		cursoDAO = (CursoDAO) factoria.getBean("cursoDAO");
 	}
 	
 	@Override
