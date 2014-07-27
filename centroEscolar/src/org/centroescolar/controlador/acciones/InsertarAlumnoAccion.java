@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class InsertarAlumnoAccion extends Accion {
 
@@ -21,7 +20,7 @@ public class InsertarAlumnoAccion extends Accion {
 
 		Alumno alumno = new Alumno(id, nombre, primerApellido, segundoApellido, curso);
 		
-		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
+		ServicioAlumnos servicioAlumnos = (ServicioAlumnos)getBean("servicioAlumnos", request);	
 		
 		servicioAlumnos.insertarAlumno(alumno);
 

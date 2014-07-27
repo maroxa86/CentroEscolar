@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class FiltrarCursoAccion extends Accion {
 
@@ -16,7 +15,7 @@ public class FiltrarCursoAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para filtrar los alumnos");
 		
-		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
+		ServicioAlumnos servicioAlumnos = (ServicioAlumnos)getBean("servicioAlumnos", request);
 		
 		List<Alumno> listaDeAlumnos = null;
 		List<Curso> listaDeCursos = servicioAlumnos.buscarTodosLosCursos();

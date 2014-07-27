@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class AltaAlumnoAccion extends Accion {
 
@@ -15,7 +14,7 @@ public class AltaAlumnoAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para mostrar el formulario para dar de alta a los alumnos");
 		
-		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
+		ServicioAlumnos servicioAlumnos = (ServicioAlumnos)getBean("servicioAlumnos", request);
 		
 		List<Curso> listaDeCursos = servicioAlumnos.buscarTodosLosCursos();
 		

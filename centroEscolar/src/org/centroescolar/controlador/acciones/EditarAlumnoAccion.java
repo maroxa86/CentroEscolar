@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class EditarAlumnoAccion extends Accion {
 
@@ -18,7 +17,8 @@ public class EditarAlumnoAccion extends Accion {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		
-		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
+		ServicioAlumnos servicioAlumnos = (ServicioAlumnos)getBean("servicioAlumnos", request);
+
 		
 		List<Curso> listaDeCursos = servicioAlumnos.buscarTodosLosCursos();
 		

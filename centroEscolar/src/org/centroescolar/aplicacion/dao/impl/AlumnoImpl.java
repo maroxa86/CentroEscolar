@@ -3,13 +3,11 @@ package org.centroescolar.aplicacion.dao.impl;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 import javax.persistence.TypedQuery;
 
 import org.apache.log4j.Logger;
-import org.centroescolar.aplicacion.JPAHelper;
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.dao.AlumnoDAO;
@@ -21,8 +19,7 @@ public class AlumnoImpl extends GenericImpl<Alumno, String> implements AlumnoDAO
 	public void insertarAlumno(Alumno alumno) {
 		log.info("Inicio metodo insertarAlumno");
 
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		EntityTransaction tx = null;
 		try {
 			tx = manager.getTransaction();
@@ -42,8 +39,7 @@ public class AlumnoImpl extends GenericImpl<Alumno, String> implements AlumnoDAO
 	public void borrarAlumno(Alumno alumno) {
 		log.info("Inicio metodo borrarAlumno");
 
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		EntityTransaction tx = null;
 		try {
 			tx = manager.getTransaction();
@@ -64,8 +60,7 @@ public class AlumnoImpl extends GenericImpl<Alumno, String> implements AlumnoDAO
 
 		log.info("Inicio metodo BuscarAlumno");
 
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		TypedQuery<Alumno> consulta = manager
 				.createQuery(
 						"SELECT alumno FROM Alumno alumno JOIN FETCH alumno.curso where alumno.id=?1",
@@ -86,8 +81,7 @@ public class AlumnoImpl extends GenericImpl<Alumno, String> implements AlumnoDAO
 	public void modificarAlumno(Alumno alumno) {
 		log.info("Inicio metodo modificarAlumno");
 
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		EntityTransaction tx = null;
 		try {
 			tx = manager.getTransaction();
@@ -107,8 +101,7 @@ public class AlumnoImpl extends GenericImpl<Alumno, String> implements AlumnoDAO
 	public List<Alumno> buscarAlumnosPorCurso(Curso curso) {
 		log.info("Inicio metodo buscarAlumnosPorCurso");
 
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		TypedQuery<Alumno> consulta = manager
 				.createQuery(
 						"SELECT alumno FROM Alumno alumno where alumno.curso=?1 order by alumno.id",

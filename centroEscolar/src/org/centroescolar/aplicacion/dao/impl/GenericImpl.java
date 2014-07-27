@@ -8,12 +8,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 
-import org.centroescolar.aplicacion.JPAHelper;
 import org.centroescolar.aplicacion.dao.GenericDAO;
 
 public class GenericImpl<T, Id extends Serializable> implements
 		GenericDAO<T, Id> {
 
+	private EntityManagerFactory entityManagerFactory = null;
 	private Class<T> claseDePersistencia;
 
 	@SuppressWarnings("unchecked")
@@ -24,8 +24,7 @@ public class GenericImpl<T, Id extends Serializable> implements
 
 	@Override
 	public List<T> buscarTodos() {
-		EntityManagerFactory factoriaSession = JPAHelper.getJPAFactory();
-		EntityManager manager = factoriaSession.createEntityManager();
+		EntityManager manager = getEntityManagerFactory().createEntityManager();
 		List<T> listaDeObjetos = null;
 		try {
 			TypedQuery<T> consulta = manager.createQuery("select o from "
@@ -36,6 +35,14 @@ public class GenericImpl<T, Id extends Serializable> implements
 		} finally {
 			manager.close();
 		}
+	}
+
+	public EntityManagerFactory getEntityManagerFactory() {
+		return entityManagerFactory;
+	}
+
+	public void setEntityManagerFactory(EntityManagerFactory entityManagerFactory) {
+		this.entityManagerFactory = entityManagerFactory;
 	}
 
 }

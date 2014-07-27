@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.centroescolar.aplicacion.bo.Alumno;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl;
 
 public class BorrarAlumnoAccion extends Accion {
 
@@ -13,7 +12,8 @@ public class BorrarAlumnoAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		log.info("Inició del proceso para borrar un alumno en el sistema");
 		
-		ServicioAlumnos servicioAlumnos = new ServicioAlumnosImpl();
+		ServicioAlumnos servicioAlumnos = (ServicioAlumnos)getBean("servicioAlumnos", request);
+
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		

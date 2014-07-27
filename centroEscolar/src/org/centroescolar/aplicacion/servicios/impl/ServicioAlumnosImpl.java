@@ -7,19 +7,11 @@ import org.centroescolar.aplicacion.bo.Curso;
 import org.centroescolar.aplicacion.dao.AlumnoDAO;
 import org.centroescolar.aplicacion.dao.CursoDAO;
 import org.centroescolar.aplicacion.servicios.ServicioAlumnos;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ServicioAlumnosImpl implements ServicioAlumnos {
 
 	private AlumnoDAO alumnoDAO = null;
 	private CursoDAO cursoDAO = null;
-	
-	@SuppressWarnings("resource")
-	public ServicioAlumnosImpl(){
-		ClassPathXmlApplicationContext factoria = new ClassPathXmlApplicationContext("contextoAplicacion.xml"); 
-		alumnoDAO = (AlumnoDAO) factoria.getBean("alumnoDAO");
-		cursoDAO = (CursoDAO) factoria.getBean("cursoDAO");
-	}
 	
 	@Override
 	public void insertarAlumno(Alumno alumno) {
@@ -55,6 +47,28 @@ public class ServicioAlumnosImpl implements ServicioAlumnos {
 	@Override
 	public List<Alumno> buscarAlumnosPorCurso(Curso curso) {
 		return alumnoDAO.buscarAlumnosPorCurso(curso);
+	}
+
+	@Override
+	public void setAlumnoDAO(AlumnoDAO alumnoDAO) {
+		this.alumnoDAO = alumnoDAO;
+		
+	}
+
+	@Override
+	public AlumnoDAO getAlumnoDAO() {
+		return alumnoDAO;
+	}
+
+	@Override
+	public void setCursoDAO(CursoDAO cursoDAO) {
+		this.cursoDAO = cursoDAO;
+		
+	}
+
+	@Override
+	public CursoDAO getsetCursoDAO() {
+		return cursoDAO;
 	}
 
 }

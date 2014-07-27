@@ -3,10 +3,38 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="alumnoDAO"
-		class="org.centroescolar.aplicacion.dao.impl.AlumnoImpl">
+	<bean id="alumnoDAO" class="org.centroescolar.aplicacion.dao.impl.AlumnoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-	<bean id="cursoDAO"
-		class="org.centroescolar.aplicacion.dao.impl.CursoImpl">
+	
+	<bean id="cursoDAO" class="org.centroescolar.aplicacion.dao.impl.CursoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
+	
+	<bean id="servicioAlumnos"
+		class="org.centroescolar.aplicacion.servicios.impl.ServicioAlumnosImpl">
+		<property name="alumnoDAO" ref="alumnoDAO" />
+		<property name="cursoDAO" ref="cursoDAO" />
+	</bean>
+	
+	<bean id="fuenteDeDatos"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost/centroescolar" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+	
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="centroEscolar" />
+		<property name="dataSource" ref="fuenteDeDatos" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+	</bean>
+	
 </beans>
