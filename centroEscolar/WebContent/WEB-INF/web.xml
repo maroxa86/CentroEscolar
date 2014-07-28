@@ -25,15 +25,14 @@
 	</listener>
 
 	<servlet>
-		<description></description>
-		<display-name>ControladorAlumnos</display-name>
-		<servlet-name>ControladorAlumnos</servlet-name>
-		<servlet-class>org.centroescolar.controlador.ControladorAlumnos</servlet-class>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>ControladorAlumnos</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
