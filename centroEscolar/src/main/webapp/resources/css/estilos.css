@@ -1,0 +1,266 @@
+/*
+	Hoja de estilo con la estructura basica de las paginas
+*/ 
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Romanesco);
+@import url(http://fonts.googleapis.com/css?family=Balthazar);
+
+/*
+	Estilos para las etiquetas basicas
+*/
+
+body
+{
+	background: -moz-radial-gradient(center, ellipse cover, #d9e9e2 0%, #4b7962 100%, #4b7962 100%, #4b7962 100%) fixed center top;
+	background: #d9e9e2 fixed center top; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #d9e9e2 0%, #4b7962 100%, #4b7962 100%, #4b7962 100%) fixed center top; /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d9e9e2), color-stop(100%,#4b7962), color-stop(100%,#4b7962), color-stop(100%,#4b7962)) fixed center top; /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #d9e9e2 0%,#4b7962 100%,#4b7962 100%,#4b7962 100%) fixed center top; /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #d9e9e2 0%,#4b7962 100%,#4b7962 100%,#4b7962 100%) fixed center top; /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #d9e9e2 0%,#4b7962 100%,#4b7962 100%,#4b7962 100%) fixed center top; /* IE10+ */
+	background: radial-gradient(ellipse at center, #d9e9e2 0%,#4b7962 100%,#4b7962 100%,#4b7962 100%) fixed center top; /* W3C */
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+ul li
+{
+	list-style: none;
+}
+
+/*
+	Estilo para el contenedor principal
+*/
+.wrapper
+{
+	background: none;
+	display: block;
+	margin: 0 auto;
+	clear: both;
+	padding: 0 160px;
+	width: 1000px;
+}
+
+/*
+	Estilos para la parte principal de la pagina
+*/
+.espacio, .contenedor
+{
+	display: block;
+	float: left;
+}
+
+.contenedor
+{
+	width: 100%;
+	
+}
+
+/*
+	Estilo para el pie de página
+*/
+
+.pie
+{
+	clear: both;
+	display: block;
+	width: 100%;
+	height: 10%;
+}
+
+.pie footer
+{
+	text-align: center;
+}
+
+.menu
+{
+	clear: both;
+	width: 100%;
+	float: left;
+}
+
+.navegacion
+{
+	display:block;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+.navegacion ul li
+{
+	float: left;
+	line-height: 35px;
+	height: 25%;
+	margin: 0;
+	list-style: none;
+	padding-right: 15%;
+}
+
+#usuario
+{
+	padding-right: 20%;
+}
+
+.ruta
+{
+	width: 100%;
+	display: block;	
+	height: 5%;
+}
+
+.titulo
+{	
+	font-family: Romanesco, cursive;
+	font-size: 5em;
+	text-align: center;
+}
+
+.principal
+{
+	border: solid 1px #000;
+	width: 80%;
+	margin: 0 10%;
+	background: #4b7962; /* Old browsers */
+	background: -moz-linear-gradient(top, #4b7962 0%, #d9e9e2 50%, #4b7962 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4b7962), color-stop(50%,#d9e9e2), color-stop(100%,#4b7962)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4b7962 0%,#d9e9e2 50%,#4b7962 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4b7962 0%,#d9e9e2 50%,#4b7962 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4b7962 0%,#d9e9e2 50%,#4b7962 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #4b7962 0%,#d9e9e2 50%,#4b7962 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b7962', endColorstr='#4b7962',GradientType=0 ); /* IE6-9 */
+}
+
+.seccion, .apartado, .tabla_alumnos
+{
+	text-align: center;
+}
+
+.tabla_alumnos
+{
+	margin-left: 20%;
+}
+
+.tabla_alumnos .campos
+{
+	font-family: 'Balthazar', serif;
+}
+
+/*
+	Estilo para los datos del desarrollador
+*/
+
+#desarrollador
+{
+	position: absolute;
+	display:none;
+}
+
+a.social 
+{
+    width:55px;
+    height:55px;
+    float:left;
+    font-size:0;
+    text-decoration:none;
+    text-indent:-9999px;
+    margin:0 10px 0 0; 
+    outline:none;
+    display:block; 
+    position:relative;
+    padding:0;
+    
+}
+
+a.social:hover 
+{ 
+    background-color: transparent; 
+    -webkit-border-radius: 0; 
+    -moz-border-radius: 0; 
+    border-radius: 0;
+}
+
+a.social img 
+{
+    width:100%; 
+    height: auto; 
+    display:block; 
+    border: none;
+}
+
+a.social  img.rollover 
+{ 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    opacity:0;
+}
+
+a.social:hover img.rollover 
+{
+    opacity:1;
+}
+
+a.social:hover img.rollout 
+{
+    opacity:0;
+}
+
+.linkedin, .twitter, .github
+{
+	width:64px;
+    height:64px;
+    float:left;
+    font-size:0;
+    text-decoration:none;
+    text-indent:-9999px;
+    margin:0 10px 0 0; 
+    outline:none;
+    display:block; 
+    position:relative;
+    padding:0;
+    background: url(../imagenes/social/linkedin_gray.png);
+}
+
+.linkedin
+{
+	background: url(../imagenes/social/linkedin_gray.png);
+}
+
+.twitter
+{
+	background: url(../imagenes/social/twitter_gray.png);
+}
+
+.github
+{
+	background: url(../imagenes/social/github_gray.png);
+}
+
+a:HOVER.linkedin
+{
+	background: url(../imagenes/social/linkedin_black.png);
+}
+
+a:HOVER.twitter
+{
+	background: url(../imagenes/social/twitter_black.png);
+}
+
+a:HOVER.github
+{
+	background: url(../imagenes/social/github_black.png);
+}
+
+.imagenCalendario
+{
+	background: url(../imagenes/jsCalendar/calendario.png) no-repeat center top;
+	width: 16px;
+	height: 16px;
+}
