@@ -225,42 +225,35 @@ a.social:hover img.rollout
     display:block; 
     position:relative;
     padding:0;
-    background: url(../imagenes/social/linkedin_gray.png);
+    background: url(../img/social/linkedin_gray.png);
 }
 
 .linkedin
 {
-	background: url(../imagenes/social/linkedin_gray.png);
+	background: url(../img/social/linkedin_gray.png);
 }
 
 .twitter
 {
-	background: url(../imagenes/social/twitter_gray.png);
+	background: url(../img/social/twitter_gray.png);
 }
 
 .github
 {
-	background: url(../imagenes/social/github_gray.png);
+	background: url(../img/social/github_gray.png);
 }
 
 a:HOVER.linkedin
 {
-	background: url(../imagenes/social/linkedin_black.png);
+	background: url(../img/social/linkedin_black.png);
 }
 
 a:HOVER.twitter
 {
-	background: url(../imagenes/social/twitter_black.png);
+	background: url(../img/social/twitter_black.png);
 }
 
 a:HOVER.github
 {
-	background: url(../imagenes/social/github_black.png);
-}
-
-.imagenCalendario
-{
-	background: url(../imagenes/jsCalendar/calendario.png) no-repeat center top;
-	width: 16px;
-	height: 16px;
+	background: url(../img/social/github_black.png);
 }
