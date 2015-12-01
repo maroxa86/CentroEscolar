@@ -1,0 +1,732 @@
+23 ago 2015 - 23:08:50,223 DEBUG [localhost-startStop-1] org.jboss.logging - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+23 ago 2015 - 23:08:50,280 WARN  [localhost-startStop-1] org.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+23 ago 2015 - 23:08:50,300 DEBUG [localhost-startStop-1] org.hibernate.jpa.internal.util.LogHelper - PersistenceUnitInfo [
+	name: centroEscolar
+	persistence provider classname: org.hibernate.ejb.HibernatePersistence
+	classloader: WebappClassLoader
+  context: centroEscolar
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@7bfcd12c
+
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: org.springframework.jdbc.datasource.DriverManagerDataSource@1a15fa40
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/C:/Users/Xavi/workspace/GCE/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/centroEscolar/WEB-INF/classes
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		org.centroescolar.aplicacion.bo.Alumno
+		org.centroescolar.aplicacion.bo.Curso]
+	Mapping files names []
+	Properties [
+		javax.persistence.jdbc.driver: com.mysql.jdbc.Driver
+		javax.persistence.jdbc.password: root
+		javax.persistence.transactionType: RESOURCE_LOCAL
+		javax.persistence.jdbc.url: jdbc:mysql://localhost/centroescolar
+		hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+		hibernate.show_sql: true
+		javax.persistence.jdbc.user: root]
+23 ago 2015 - 23:08:50,330 DEBUG [localhost-startStop-1] org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+23 ago 2015 - 23:08:50,335 DEBUG [localhost-startStop-1] org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+23 ago 2015 - 23:08:50,338 DEBUG [localhost-startStop-1] org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+23 ago 2015 - 23:08:50,338 DEBUG [localhost-startStop-1] org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+23 ago 2015 - 23:08:50,367 DEBUG [localhost-startStop-1] org.hibernate.boot.registry.selector.internal.StrategySelectorImpl - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5] -> [org.hibernate.dialect.MySQL5Dialect] (replacing [org.hibernate.dialect.MySQL5Dialect])
+23 ago 2015 - 23:08:50,367 DEBUG [localhost-startStop-1] org.hibernate.boot.registry.selector.internal.StrategySelectorImpl - Registering named strategy selector [org.hibernate.dialect.Dialect] : [MySQL5InnoDB] -> [org.hibernate.dialect.MySQL5InnoDBDialect] (replacing [org.hibernate.dialect.MySQL5InnoDBDialect])
+23 ago 2015 - 23:08:50,447 INFO  [localhost-startStop-1] org.hibernate.Version - HHH000412: Hibernate Core {4.3.5.Final}
+23 ago 2015 - 23:08:50,449 INFO  [localhost-startStop-1] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+23 ago 2015 - 23:08:50,451 INFO  [localhost-startStop-1] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+23 ago 2015 - 23:08:50,651 DEBUG [localhost-startStop-1] org.hibernate.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+23 ago 2015 - 23:08:50,702 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3cf70969
+23 ago 2015 - 23:08:50,702 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3cf70969
+23 ago 2015 - 23:08:50,702 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3cf70969
+23 ago 2015 - 23:08:50,704 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1a8bc431
+23 ago 2015 - 23:08:50,707 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4f76e7db
+23 ago 2015 - 23:08:50,708 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@3211caa5
+23 ago 2015 - 23:08:50,710 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@493f16db
+23 ago 2015 - 23:08:50,710 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@493f16db
+23 ago 2015 - 23:08:50,710 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@493f16db
+23 ago 2015 - 23:08:50,712 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@6c5692b2
+23 ago 2015 - 23:08:50,712 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@6c5692b2
+23 ago 2015 - 23:08:50,712 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@6c5692b2
+23 ago 2015 - 23:08:50,715 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3b144dbe
+23 ago 2015 - 23:08:50,715 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3b144dbe
+23 ago 2015 - 23:08:50,715 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3b144dbe
+23 ago 2015 - 23:08:50,716 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@70d1aa9d
+23 ago 2015 - 23:08:50,717 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@70d1aa9d
+23 ago 2015 - 23:08:50,717 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@70d1aa9d
+23 ago 2015 - 23:08:50,719 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1b0d2b28
+23 ago 2015 - 23:08:50,719 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1b0d2b28
+23 ago 2015 - 23:08:50,719 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@1b0d2b28
+23 ago 2015 - 23:08:50,722 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@c388646
+23 ago 2015 - 23:08:50,722 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@c388646
+23 ago 2015 - 23:08:50,722 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@c388646
+23 ago 2015 - 23:08:50,724 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@6e203f8e
+23 ago 2015 - 23:08:50,725 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@6e203f8e
+23 ago 2015 - 23:08:50,725 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@6e203f8e
+23 ago 2015 - 23:08:50,728 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@632a74f3
+23 ago 2015 - 23:08:50,728 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@632a74f3
+23 ago 2015 - 23:08:50,730 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@44bc7879
+23 ago 2015 - 23:08:50,730 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@44bc7879
+23 ago 2015 - 23:08:50,731 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@3f5e6059
+23 ago 2015 - 23:08:50,731 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@3f5e6059
+23 ago 2015 - 23:08:50,733 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1e978540
+23 ago 2015 - 23:08:50,734 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@2997fded
+23 ago 2015 - 23:08:50,736 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@ca5af1a
+23 ago 2015 - 23:08:50,736 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@ca5af1a
+23 ago 2015 - 23:08:50,739 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@c695daa
+23 ago 2015 - 23:08:50,739 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@c695daa
+23 ago 2015 - 23:08:50,742 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@29f15828
+23 ago 2015 - 23:08:50,742 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@29f15828
+23 ago 2015 - 23:08:50,745 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@79878d3b
+23 ago 2015 - 23:08:50,745 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@79878d3b
+23 ago 2015 - 23:08:50,745 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@79878d3b
+23 ago 2015 - 23:08:50,747 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1ff19da9
+23 ago 2015 - 23:08:50,749 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@25cb57f6
+23 ago 2015 - 23:08:50,749 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@25cb57f6
+23 ago 2015 - 23:08:50,749 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@25cb57f6
+23 ago 2015 - 23:08:50,750 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@56c6e69d
+23 ago 2015 - 23:08:50,752 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@68549c97
+23 ago 2015 - 23:08:50,752 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@68549c97
+23 ago 2015 - 23:08:50,753 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@33dc3130
+23 ago 2015 - 23:08:50,753 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@33dc3130
+23 ago 2015 - 23:08:50,755 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@e0fa727
+23 ago 2015 - 23:08:50,755 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@e0fa727
+23 ago 2015 - 23:08:50,757 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@1e3a01a9
+23 ago 2015 - 23:08:50,757 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1e3a01a9
+23 ago 2015 - 23:08:50,760 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5dba7a04
+23 ago 2015 - 23:08:50,760 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5dba7a04
+23 ago 2015 - 23:08:50,760 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1a25f61d
+23 ago 2015 - 23:08:50,762 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@5c896371
+23 ago 2015 - 23:08:50,764 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@669328e4
+23 ago 2015 - 23:08:50,764 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@669328e4
+23 ago 2015 - 23:08:50,764 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@669328e4
+23 ago 2015 - 23:08:50,765 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5b2a9e00
+23 ago 2015 - 23:08:50,765 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5b2a9e00
+23 ago 2015 - 23:08:50,766 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5b2a9e00
+23 ago 2015 - 23:08:50,767 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@2e42867f
+23 ago 2015 - 23:08:50,769 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@436fd7f6
+23 ago 2015 - 23:08:50,769 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@436fd7f6
+23 ago 2015 - 23:08:50,769 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@436fd7f6
+23 ago 2015 - 23:08:50,770 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@56e60974
+23 ago 2015 - 23:08:50,770 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@56e60974
+23 ago 2015 - 23:08:50,770 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@56e60974
+23 ago 2015 - 23:08:50,772 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@1d075414
+23 ago 2015 - 23:08:50,773 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@4902c000
+23 ago 2015 - 23:08:50,782 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@340ebf83
+23 ago 2015 - 23:08:50,782 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@340ebf83
+23 ago 2015 - 23:08:50,783 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@728f474f
+23 ago 2015 - 23:08:50,792 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1886dd24
+23 ago 2015 - 23:08:50,792 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1886dd24
+23 ago 2015 - 23:08:50,799 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@6ebc039f
+23 ago 2015 - 23:08:50,799 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6ebc039f
+23 ago 2015 - 23:08:50,799 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@6ee32883
+23 ago 2015 - 23:08:50,800 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@55f4a15d
+23 ago 2015 - 23:08:50,802 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@3c827ed8
+23 ago 2015 - 23:08:50,807 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@41d97425
+23 ago 2015 - 23:08:50,807 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@41d97425
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5502b80e
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@7042b13b
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@24b1d340
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7f26c490
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3fa4d1b2
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5a8a6414
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@708b97d6
+23 ago 2015 - 23:08:50,808 DEBUG [localhost-startStop-1] org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3940df13
+23 ago 2015 - 23:08:50,843 INFO  [localhost-startStop-1] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+23 ago 2015 - 23:08:50,864 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+23 ago 2015 - 23:08:50,864 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+23 ago 2015 - 23:08:50,866 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+23 ago 2015 - 23:08:50,866 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+23 ago 2015 - 23:08:50,868 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+23 ago 2015 - 23:08:50,869 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+23 ago 2015 - 23:08:50,871 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+23 ago 2015 - 23:08:50,872 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+23 ago 2015 - 23:08:50,873 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+23 ago 2015 - 23:08:50,874 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+23 ago 2015 - 23:08:50,874 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+23 ago 2015 - 23:08:50,875 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+23 ago 2015 - 23:08:50,876 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+23 ago 2015 - 23:08:50,877 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+23 ago 2015 - 23:08:50,878 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+23 ago 2015 - 23:08:50,890 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Preparing to build session factory with filters : {}
+23 ago 2015 - 23:08:51,137 DEBUG [localhost-startStop-1] org.hibernate.engine.jdbc.internal.JdbcServicesImpl - Database ->
+       name : MySQL
+    version : 5.6.26-log
+      major : 5
+      minor : 6
+23 ago 2015 - 23:08:51,138 DEBUG [localhost-startStop-1] org.hibernate.engine.jdbc.internal.JdbcServicesImpl - Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.30 ( Revision: alexander.soklakov@oracle.com-20140310090514-8xt1yoht5ksg2e7c )
+      major : 5
+      minor : 1
+23 ago 2015 - 23:08:51,138 DEBUG [localhost-startStop-1] org.hibernate.engine.jdbc.internal.JdbcServicesImpl - JDBC version : 4.0
+23 ago 2015 - 23:08:51,140 DEBUG [localhost-startStop-1] org.hibernate.engine.jdbc.cursor.internal.StandardRefCursorSupport - Unexpected error trying to gauge level of JDBC REF_CURSOR support : null
+23 ago 2015 - 23:08:51,168 INFO  [localhost-startStop-1] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+23 ago 2015 - 23:08:51,239 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing hbm.xml files
+23 ago 2015 - 23:08:51,239 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Process annotated classes
+23 ago 2015 - 23:08:51,243 DEBUG [localhost-startStop-1] org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: org.centroescolar.aplicacion.bo.Curso
+23 ago 2015 - 23:08:51,282 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+23 ago 2015 - 23:08:51,296 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.EntityBinder - Import with entity name Curso
+23 ago 2015 - 23:08:51,301 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.EntityBinder - Bind entity org.centroescolar.aplicacion.bo.Curso on table CUR_CURSO
+23 ago 2015 - 23:08:51,343 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=idCurso, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,349 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+23 ago 2015 - 23:08:51,352 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Curso:id]
+23 ago 2015 - 23:08:51,354 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+23 ago 2015 - 23:08:51,356 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property id
+23 ago 2015 - 23:08:51,362 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=curso, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,362 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property curso with lazy=false
+23 ago 2015 - 23:08:51,362 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Curso:curso]
+23 ago 2015 - 23:08:51,362 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for curso
+23 ago 2015 - 23:08:51,362 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property curso
+23 ago 2015 - 23:08:51,363 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='curso', referencedColumn='', mappedBy=''}
+23 ago 2015 - 23:08:51,363 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=listaDeAlumnos, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,365 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=null, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,385 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=element, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,385 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(CUR_CURSO), mappingColumn=listaDeAlumnos_KEY, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,385 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='listaDeAlumnos_KEY', referencedColumn='null', mappedBy='null'}
+23 ago 2015 - 23:08:51,385 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+23 ago 2015 - 23:08:51,385 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+23 ago 2015 - 23:08:51,386 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.CollectionBinder - Collection role: org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,391 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property listaDeAlumnos
+23 ago 2015 - 23:08:51,395 DEBUG [localhost-startStop-1] org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: org.centroescolar.aplicacion.bo.Alumno
+23 ago 2015 - 23:08:51,395 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+23 ago 2015 - 23:08:51,395 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.EntityBinder - Import with entity name Alumno
+23 ago 2015 - 23:08:51,396 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.EntityBinder - Bind entity org.centroescolar.aplicacion.bo.Alumno on table ALUM_ALUMNO
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ALUM_ALUMNO), mappingColumn=id, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Alumno:id]
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property id
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='curso', referencedColumn='', mappedBy=''}
+23 ago 2015 - 23:08:51,398 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ALUM_ALUMNO), mappingColumn=curso, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property curso
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ALUM_ALUMNO), mappingColumn=nombre, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property nombre with lazy=false
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Alumno:nombre]
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for nombre
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property nombre
+23 ago 2015 - 23:08:51,402 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ALUM_ALUMNO), mappingColumn=primerApellido, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property primerApellido with lazy=false
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Alumno:primerApellido]
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for primerApellido
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property primerApellido
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(ALUM_ALUMNO), mappingColumn=segundoApellido, insertable=true, updatable=true, unique=false}
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property segundoApellido with lazy=false
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [org.centroescolar.aplicacion.bo.Alumno:segundoApellido]
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for segundoApellido
+23 ago 2015 - 23:08:51,403 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.PropertyBinder - Building property segundoApellido
+23 ago 2015 - 23:08:51,404 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+23 ago 2015 - 23:08:51,404 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for curso
+23 ago 2015 - 23:08:51,404 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+23 ago 2015 - 23:08:51,405 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for nombre
+23 ago 2015 - 23:08:51,405 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for primerApellido
+23 ago 2015 - 23:08:51,405 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for segundoApellido
+23 ago 2015 - 23:08:51,406 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing fk mappings (*ToOne and JoinedSubclass)
+23 ago 2015 - 23:08:51,416 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing extends queue
+23 ago 2015 - 23:08:51,416 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing extends queue
+23 ago 2015 - 23:08:51,416 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing collection mappings
+23 ago 2015 - 23:08:51,416 DEBUG [localhost-startStop-1] org.hibernate.cfg.CollectionSecondPass - Second pass for collection: org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,416 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.CollectionBinder - Binding a OneToMany: org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos through a foreign key
+23 ago 2015 - 23:08:51,417 DEBUG [localhost-startStop-1] org.hibernate.cfg.annotations.CollectionBinder - Mapping collection: org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos -> ALUM_ALUMNO
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.CollectionSecondPass - Mapped collection key: curso, one-to-many: org.centroescolar.aplicacion.bo.Alumno
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing native query and ResultSetMapping mappings
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing association property references
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Creating tables' unique integer identifiers
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Processing foreign key constraints
+23 ago 2015 - 23:08:51,420 DEBUG [localhost-startStop-1] org.hibernate.cfg.Configuration - Resolving reference to class: org.centroescolar.aplicacion.bo.Curso
+23 ago 2015 - 23:08:51,425 DEBUG [localhost-startStop-1] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+23 ago 2015 - 23:08:51,426 DEBUG [localhost-startStop-1] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+23 ago 2015 - 23:08:51,440 DEBUG [localhost-startStop-1] org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23 ago 2015 - 23:08:51,446 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+23 ago 2015 - 23:08:51,446 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+23 ago 2015 - 23:08:51,446 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Wrap result sets: disabled
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - multi-tenancy strategy : NONE
+23 ago 2015 - 23:08:51,447 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+23 ago 2015 - 23:08:51,454 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Using BatchFetchStyle : LEGACY
+23 ago 2015 - 23:08:51,454 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 2
+23 ago 2015 - 23:08:51,454 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+23 ago 2015 - 23:08:51,454 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+23 ago 2015 - 23:08:51,454 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+23 ago 2015 - 23:08:51,455 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+23 ago 2015 - 23:08:51,455 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Default null ordering: none
+23 ago 2015 - 23:08:51,456 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+23 ago 2015 - 23:08:51,461 INFO  [localhost-startStop-1] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+23 ago 2015 - 23:08:51,461 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+23 ago 2015 - 23:08:51,461 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+23 ago 2015 - 23:08:51,461 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+23 ago 2015 - 23:08:51,461 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Query cache: disabled
+23 ago 2015 - 23:08:51,463 DEBUG [localhost-startStop-1] org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Second-level cache direct-reference entries: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Automatic eviction of collection cache: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Statistics: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - Allow initialization of lazy state outside session : : disabled
+23 ago 2015 - 23:08:51,471 DEBUG [localhost-startStop-1] org.hibernate.cfg.SettingsFactory - JTA Track by Thread: enabled
+23 ago 2015 - 23:08:51,489 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryImpl - Building session factory
+23 ago 2015 - 23:08:51,510 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+23 ago 2015 - 23:08:51,510 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryImpl - Instantiating session factory with properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, catalina.base=C:\Users\Xavi\workspace\GCE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, catalina.useNaming=true, os.name=Windows 8.1, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes, sun.desktop=windows, javax.persistence.transactionType=RESOURCE_LOCAL, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_45-b15, javax.persistence.jdbc.user=root, user.name=Xavi, tomcat.util.scan.StandardJarScanFilter.jarsToScan=log4j-core*.jar,log4j-taglib*.jar, shared.loader=, tomcat.util.buf.StringCache.byte.enabled=true, javax.persistence.validation.mode=AUTO, user.language=es, java.naming.factory.initial=org.apache.naming.java.javaURLContextFactory, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_45\jre\bin, java.version=1.8.0_45, user.timezone=Europe/Paris, sun.arch.data.model=64, java.endorsed.dirs=C:\apache-tomcat-8.0.24\endorsed, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, file.encoding.pkg=sun.io, package.access=sun.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.tomcat., file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=52.0, user.country=ES, java.home=C:\Program Files\Java\jdk1.8.0_45\jre, java.vm.info=mixed mode, os.version=6.3, path.separator=;, java.vm.version=25.45-b02, javax.persistence.jdbc.url=jdbc:mysql://localhost/centroescolar, user.variant=, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, package.definition=sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.jasper.,org.apache.naming.,org.apache.tomcat., user.script=, java.naming.factory.url.pkgs=org.apache.naming, user.home=C:\Users\Xavi, java.specification.vendor=Oracle Corporation, tomcat.util.scan.StandardJarScanFilter.jarsToSkip=bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,websocket-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-storeconfig.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-util-scan.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-websocket.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,tools.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,taglibs-standard-spec-*.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,junit.jar,junit-*.jar,ant-launcher.jar,cobertura-*.jar,asm-*.jar,dom4j-*.jar,icu4j-*.jar,jaxen-*.jar,jdom-*.jar,jetty-*.jar,oro-*.jar,servlet-api-*.jar,tagsoup-*.jar,xmlParserAPIs-*.jar,xom-*.jar, java.library.path=C:\Program Files\Java\jdk1.8.0_45\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_45\jre\bin;C:/Program Files/Java/jre1.8.0_51/bin/server;C:/Program Files/Java/jre1.8.0_51/bin;C:/Program Files/Java/jre1.8.0_51/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\apache-maven-3.3.3\bin;%JAVA_HOME%;C:\Program Files (x86)\Skype\Phone\;C:\sonar-runner-2.4\bin;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5.4 & MySQL Utilities 1.5.4 1.5\Doctrine extensions for PHP\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\eclipse;;., java.vendor.url=http://java.oracle.com/, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, hibernate.ejb.persistenceUnitName=centroEscolar, common.loader="${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar", java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.apache.catalina.startup.Bootstrap start, java.class.path=C:\apache-tomcat-8.0.24\bin\bootstrap.jar;C:\apache-tomcat-8.0.24\bin\tomcat-juli.jar;C:\Program Files\Java\jdk1.8.0_45\lib\tools.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, catalina.home=C:\apache-tomcat-8.0.24, javax.persistence.nonJtaDataSource=org.springframework.jdbc.datasource.DriverManagerDataSource@1a15fa40, sun.cpu.endian=little, javax.persistence.jdbc.driver=com.mysql.jdbc.Driver, sun.os.patch.level=, java.io.tmpdir=C:\Users\Xavi\AppData\Local\Temp\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, javax.persistence.sharedCache.mode=UNSPECIFIED, server.loader=, os.arch=amd64, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, user.dir=C:\eclipse, javax.persistence.jdbc.password=root, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, wtp.deploy=C:\Users\Xavi\workspace\GCE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps, file.encoding=UTF-8, java.specification.version=1.8, hibernate.show_sql=true}
+23 ago 2015 - 23:08:51,527 DEBUG [localhost-startStop-1] org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+23 ago 2015 - 23:08:51,536 DEBUG [localhost-startStop-1] org.hibernate.engine.spi.CascadeStyles - External cascade style regsitration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST]
+23 ago 2015 - 23:08:51,636 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQL5Dialect]
+23 ago 2015 - 23:08:51,636 DEBUG [localhost-startStop-1] org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.MySQL5Dialect]
+23 ago 2015 - 23:08:51,792 DEBUG [localhost-startStop-1] org.hibernate.persister.collection.AbstractCollectionPersister - Static SQL for collection: org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,792 DEBUG [localhost-startStop-1] org.hibernate.persister.collection.AbstractCollectionPersister -  Row insert: update ALUM_ALUMNO set curso=? where id=?
+23 ago 2015 - 23:08:51,792 DEBUG [localhost-startStop-1] org.hibernate.persister.collection.AbstractCollectionPersister -  Row update: update ALUM_ALUMNO set  where id=?
+23 ago 2015 - 23:08:51,792 DEBUG [localhost-startStop-1] org.hibernate.persister.collection.AbstractCollectionPersister -  Row delete: update ALUM_ALUMNO set curso=null where curso=? and id=?
+23 ago 2015 - 23:08:51,792 DEBUG [localhost-startStop-1] org.hibernate.persister.collection.AbstractCollectionPersister -  One-shot delete: update ALUM_ALUMNO set curso=null where curso=?
+23 ago 2015 - 23:08:51,797 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: org.centroescolar.aplicacion.bo.Curso
+23 ago 2015 - 23:08:51,797 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select idCurso from CUR_CURSO where idCurso =?
+23 ago 2015 - 23:08:51,797 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select curso_.idCurso, curso_.curso as curso2_1_ from CUR_CURSO curso_ where curso_.idCurso=?
+23 ago 2015 - 23:08:51,797 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into CUR_CURSO (curso, idCurso) values (?, ?)
+23 ago 2015 - 23:08:51,798 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update CUR_CURSO set curso=? where idCurso=?
+23 ago 2015 - 23:08:51,798 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from CUR_CURSO where idCurso=?
+23 ago 2015 - 23:08:51,849 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2805955d]
+23 ago 2015 - 23:08:51,851 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,851 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,857 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,884 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,891 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [NONE]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@346ca629]
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [READ]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@ee090b7]
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,894 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [UPGRADE]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@246e5e59]
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [UPGRADE_NOWAIT]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6a16d527]
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,895 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [UPGRADE_SKIPLOCKED]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ec5db6a]
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [FORCE]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e56ec25]
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,896 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [PESSIMISTIC_READ]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? lock in share mode
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28c40dcf]
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [PESSIMISTIC_WRITE]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,897 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6e052d82]
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [PESSIMISTIC_FORCE_INCREMENT]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=? for update
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6a988b4f]
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,898 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [OPTIMISTIC]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4b01536]
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : listaDeAlumnos
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Curso)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Curso)
+          - SQL table alias mapping - curso0_
+          - alias suffix - 0_
+          - suffixed key columns - {idCurso1_1_0_}
+
+23 ago 2015 - 23:08:51,899 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Curso [OPTIMISTIC_FORCE_INCREMENT]: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,924 DEBUG [localhost-startStop-1] org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity org.centroescolar.aplicacion.bo.Curso: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,924 DEBUG [localhost-startStop-1] org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity org.centroescolar.aplicacion.bo.Curso: select curso0_.idCurso as idCurso1_1_0_, curso0_.curso as curso2_1_0_ from CUR_CURSO curso0_ where curso0_.idCurso=?
+23 ago 2015 - 23:08:51,925 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: org.centroescolar.aplicacion.bo.Alumno
+23 ago 2015 - 23:08:51,925 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from ALUM_ALUMNO where id =?
+23 ago 2015 - 23:08:51,925 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select alumno_.id, alumno_.curso as curso5_0_, alumno_.nombre as nombre2_0_, alumno_.primerApellido as primerAp3_0_, alumno_.segundoApellido as segundoA4_0_ from ALUM_ALUMNO alumno_ where alumno_.id=?
+23 ago 2015 - 23:08:51,925 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into ALUM_ALUMNO (curso, nombre, primerApellido, segundoApellido, id) values (?, ?, ?, ?, ?)
+23 ago 2015 - 23:08:51,925 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update ALUM_ALUMNO set curso=?, nombre=?, primerApellido=?, segundoApellido=? where id=?
+23 ago 2015 - 23:08:51,926 DEBUG [localhost-startStop-1] org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from ALUM_ALUMNO where id=?
+23 ago 2015 - 23:08:51,926 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@432be7b1]
+23 ago 2015 - 23:08:51,926 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,929 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6bc64585]
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso.curso
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,933 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(curso)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=org.centroescolar.aplicacion.bo.Curso)
+                - SQL table alias mapping - curso1_
+                - alias suffix - 1_
+                - suffixed key columns - {idCurso1_1_1_}
+
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [NONE]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_, curso1_.idCurso as idCurso1_1_1_, curso1_.curso as curso2_1_1_ from ALUM_ALUMNO alumno0_ left outer join CUR_CURSO curso1_ on alumno0_.curso=curso1_.idCurso where alumno0_.id=?
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@668749ac]
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@165695fb]
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso.curso
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : curso.listaDeAlumnos
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,935 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(curso)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=org.centroescolar.aplicacion.bo.Curso)
+                - SQL table alias mapping - curso1_
+                - alias suffix - 1_
+                - suffixed key columns - {idCurso1_1_1_}
+
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [READ]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_, curso1_.idCurso as idCurso1_1_1_, curso1_.curso as curso2_1_1_ from ALUM_ALUMNO alumno0_ left outer join CUR_CURSO curso1_ on alumno0_.curso=curso1_.idCurso where alumno0_.id=?
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2a68bfae]
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@490df205]
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [UPGRADE]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4d6070b2]
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,936 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7bcbbc66]
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [UPGRADE_NOWAIT]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5df0f4c0]
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@602922e3]
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,937 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [UPGRADE_SKIPLOCKED]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@506db3df]
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3f7afc2]
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,938 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [FORCE]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@461e5380]
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@576e9b43]
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [PESSIMISTIC_READ]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? lock in share mode
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@69d9a7d3]
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21dd750a]
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,939 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [PESSIMISTIC_WRITE]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@24a56f1]
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@990f0d]
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [PESSIMISTIC_FORCE_INCREMENT]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=? for update
+23 ago 2015 - 23:08:51,940 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4aa64f31]
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@701ab371]
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [OPTIMISTIC]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=?
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38b33b18]
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f43885]
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,941 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,942 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,942 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=org.centroescolar.aplicacion.bo.Alumno)
+    - Returns
+       - EntityReturnImpl(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:0>, path=org.centroescolar.aplicacion.bo.Alumno)
+          - EntityAttributeFetchImpl(entity=org.centroescolar.aplicacion.bo.Curso, querySpaceUid=<gen:1>, path=org.centroescolar.aplicacion.bo.Alumno.curso)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=org.centroescolar.aplicacion.bo.Alumno)
+          - SQL table alias mapping - alumno0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+23 ago 2015 - 23:08:51,942 DEBUG [localhost-startStop-1] org.hibernate.loader.entity.plan.EntityLoader - Static select for entity org.centroescolar.aplicacion.bo.Alumno [OPTIMISTIC_FORCE_INCREMENT]: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=?
+23 ago 2015 - 23:08:51,942 DEBUG [localhost-startStop-1] org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity org.centroescolar.aplicacion.bo.Alumno: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=?
+23 ago 2015 - 23:08:51,942 DEBUG [localhost-startStop-1] org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity org.centroescolar.aplicacion.bo.Alumno: select alumno0_.id as id1_0_0_, alumno0_.curso as curso5_0_0_, alumno0_.nombre as nombre2_0_0_, alumno0_.primerApellido as primerAp3_0_0_, alumno0_.segundoApellido as segundoA4_0_0_ from ALUM_ALUMNO alumno0_ where alumno0_.id=?
+23 ago 2015 - 23:08:51,957 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3bec3ebb]
+23 ago 2015 - 23:08:51,957 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@130b5ac9]
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : curso
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Property path deemed to be circular : curso
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nombre
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : primerApellido
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : segundoApellido
+23 ago 2015 - 23:08:51,960 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+23 ago 2015 - 23:08:51,965 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+23 ago 2015 - 23:08:51,965 DEBUG [localhost-startStop-1] org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(collection=org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos)
+    - Returns
+       - CollectionReturnImpl(collection=org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos, querySpaceUid=<gen:0>, path=[org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=org.centroescolar.aplicacion.bo.Alumno, querySpaceUid=<gen:1>, path=[org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos)
+          - SQL table alias mapping - listadealu0_
+          - alias suffix - 0_
+          - suffixed key columns - {curso5_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=org.centroescolar.aplicacion.bo.Alumno)
+                - SQL table alias mapping - listadealu0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+23 ago 2015 - 23:08:51,966 DEBUG [localhost-startStop-1] org.hibernate.loader.collection.plan.CollectionLoader - Static select for collection org.centroescolar.aplicacion.bo.Curso.listaDeAlumnos: select listadealu0_.curso as curso5_1_0_, listadealu0_.id as id1_0_0_, listadealu0_.id as id1_0_1_, listadealu0_.curso as curso5_0_1_, listadealu0_.nombre as nombre2_0_1_, listadealu0_.primerApellido as primerAp3_0_1_, listadealu0_.segundoApellido as segundoA4_0_1_ from ALUM_ALUMNO listadealu0_ where listadealu0_.curso=?
+23 ago 2015 - 23:08:51,970 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@454dd898
+23 ago 2015 - 23:08:51,970 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 6b02c2a9-de35-4b4b-955c-f0afdc0ddd41 (<unnamed>)
+23 ago 2015 - 23:08:51,970 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+23 ago 2015 - 23:08:51,970 DEBUG [localhost-startStop-1] org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
+23 ago 2015 - 23:08:51,971 DEBUG [localhost-startStop-1] org.hibernate.internal.NamedQueryRepository - Checking 0 named HQL queries
+23 ago 2015 - 23:08:51,971 DEBUG [localhost-startStop-1] org.hibernate.internal.NamedQueryRepository - Checking 0 named SQL queries
+23 ago 2015 - 23:08:51,983 DEBUG [localhost-startStop-1] org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+23 ago 2015 - 23:08:51,990 DEBUG [localhost-startStop-1] org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator - No actions specified; doing nothing
+23 ago 2015 - 23:08:52,084 DEBUG [localhost-startStop-1] org.hibernate.jpa.internal.EntityManagerFactoryRegistry - Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@3ff40b83
+23 ago 2015 - 23:08:52,084 DEBUG [localhost-startStop-1] org.hibernate.jpa.internal.EntityManagerFactoryRegistry - Registering EntityManagerFactory: centroEscolar 

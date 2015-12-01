@@ -18,6 +18,30 @@ public class ServicioAlumnosImpl implements ServicioAlumnos {
 	private CursoDAO cursoDAO = null;
 	
 	@Override
+	@Autowired
+	public void setAlumnoDAO(AlumnoDAO alumnoDAO) {
+		this.alumnoDAO = alumnoDAO;
+		
+	}
+
+	@Override
+	public AlumnoDAO getAlumnoDAO() {
+		return alumnoDAO;
+	}
+
+	@Override
+	@Autowired
+	public void setCursoDAO(CursoDAO cursoDAO) {
+		this.cursoDAO = cursoDAO;
+		
+	}
+
+	@Override
+	public CursoDAO getsetCursoDAO() {
+		return cursoDAO;
+	}
+	
+	@Override
 	@Transactional
 	public void insertarAlumno(Alumno alumno) {
 		alumnoDAO.insertar(alumno);
@@ -59,29 +83,4 @@ public class ServicioAlumnosImpl implements ServicioAlumnos {
 	public List<Alumno> buscarAlumnosPorCurso(Curso curso) {
 		return alumnoDAO.buscarAlumnosPorCurso(curso);
 	}
-
-	@Override
-	@Autowired
-	public void setAlumnoDAO(AlumnoDAO alumnoDAO) {
-		this.alumnoDAO = alumnoDAO;
-		
-	}
-
-	@Override
-	public AlumnoDAO getAlumnoDAO() {
-		return alumnoDAO;
-	}
-
-	@Override
-	@Autowired
-	public void setCursoDAO(CursoDAO cursoDAO) {
-		this.cursoDAO = cursoDAO;
-		
-	}
-
-	@Override
-	public CursoDAO getsetCursoDAO() {
-		return cursoDAO;
-	}
-
 }

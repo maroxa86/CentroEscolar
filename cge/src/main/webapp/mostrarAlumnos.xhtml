@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html">
+	<f:view contentType="text/html">
+		<body>
+			<h:form>
+				<h:selectOneMenu id="cursos" valueChangeListener="#{AlumnoManagedBeans.filtrar}"
+				value="#{AlumnoManagedBeans.curso}" onchange="submit()">
+					<f:selectItem itemValue="0" itemLabel="Seleccionar" />
+					<f:selectItems value="#{AlumnoManagedBeans.listaDeCursos}"/>					
+				</h:selectOneMenu>
+				<h:dataTable id="tabla" value="#{AlumnoManagedBeans.listaDeAlumnos}" var="alumno">
+					<h:column>
+						#{alumno.id}
+					</h:column>
+					<h:column>
+						#{alumno.nombre}
+					</h:column>
+					<h:column>
+						#{alumno.apellidos}
+					</h:column>
+					<h:column>
+						#{alumno.curso.descripcion}
+					</h:column>
+					<h:column>
+						<h:commandLink value="borrar" actionListener="#{AlumnoManagedBeans.borrar(alumno.id)}" />
+					</h:column>
+					<h:column>
+						<h:commandLink value="editar" actionListener="#{AlumnoManagedBeans.editar(alumno.id)}" action="editarAlumno"/>
+					</h:column>
+				</h:dataTable>
+				<h:button outcome="nuevoAlumno" value="insertar"/>
+			</h:form>
+		</body>
+	</f:view>
+</html>

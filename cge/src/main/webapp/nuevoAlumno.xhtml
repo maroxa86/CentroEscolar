@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	<f:view contentType="text/html">
+		<h:head>
+			<title>Formulario Alta Alumno</title>
+		</h:head>
+		<h:body bgcolor="white">
+			<h:form>
+				<p>
+					<label for="id">Id:</label>
+					<h:inputText id="id" value="#{AlumnoManagedBeans.id}"/>
+				</p>
+				<p>
+					<label for="nombre">Nombre:</label>
+					<h:inputText id="nombre" value="#{AlumnoManagedBeans.nombre}"/>
+				</p>
+				<p>
+					<label for="apellidos">Apellidos:</label>
+					<h:inputText id="apellidos" value="#{AlumnoManagedBeans.apellidos}"/>
+				</p>
+				<p>
+					<label for="curso">Curso:</label>
+					<h:selectOneMenu id="curso" value="#{AlumnoManagedBeans.curso}">
+						<f:selectItem itemValue="0" itemLabel="Seleccionar"/>
+						<f:selectItems value="#{AlumnoManagedBeans.listaDeCursos}"/>
+					</h:selectOneMenu>
+				</p>
+				<h:commandButton id="submit" actionListener="#{AlumnoManagedBeans.insertar}" action="mostrarAlumnos" value="Insertar"/>
+			</h:form>
+		</h:body>
+	</f:view>
+</html>
